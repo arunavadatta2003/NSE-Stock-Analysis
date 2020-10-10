@@ -37,7 +37,7 @@ st.markdown(
 
 # Create a function to get use inputs
 st.sidebar.header('User Input')
-stock_symbol = st.sidebar.text_input('NSE Stock Symbol:', "")
+stock_symbol = st.sidebar.text_input('NSE Stock Symbol:', "SBIN")
 start_date = st.sidebar.date_input('Start date (YYYY/MM/DD)')
 end_date = st.sidebar.date_input('End date (YYYY/MM/DD)')
 
