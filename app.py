@@ -51,7 +51,7 @@ df.to_csv(url)
 
 # Load data
 
-df = pd.read_csv(url)
+df = pd.read_csv(url, error_bad_lines=False)
 
 # Disply the Close Price 
 st.header ("Close Price History Chart of " + stock_symbol)
