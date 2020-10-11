@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # Add a title and an image
 st.write("""
 # Stock Market Web Application
-**Visually** show data of a stock by Arunava Datta!
+**Visually** show data of a stock created by Arunava Datta!
 """)
 
 # Set the Background black
@@ -37,7 +37,7 @@ st.markdown(
 
 # Create a function to get use inputs
 st.sidebar.header('User Input')
-stock_symbol = st.sidebar.text_input('NSE Stock Symbol:', "")
+stock_symbol = st.sidebar.text_input('NSE Stock Symbol:', "SBIN")
 start_date = st.sidebar.date_input('Start date (YYYY/MM/DD)')
 end_date = st.sidebar.date_input('End date (YYYY/MM/DD)')
 
