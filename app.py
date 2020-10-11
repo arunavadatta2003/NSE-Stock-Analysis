@@ -44,15 +44,6 @@ end_date = st.sidebar.date_input('End date (YYYY/MM/DD)')
 # Load data
 df = get_history(symbol=stock_symbol, start=start_date, end=end_date)
 
-url = 'https://github.com/arunavadatta2003/NSE-Stock-Analysis.git/data.csv'
-
-# Save data
-df.to_csv(url)
-
-# Load data
-
-df = pd.read_csv(url, error_bad_lines=False)
-
 # Disply the Close Price 
 st.header ("Close Price History Chart of " + stock_symbol)
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -171,6 +162,8 @@ st.header ("RSI Plot of " + stock_symbol)
 plt.figure(figsize=(20,8))
 plt.title('RSI Plot of '+ stock_symbol)
 plt.plot(new_df.index, new_df['RSI'])
+plt.xlabel('Date')
+plt.ylabel('RSI Values')
 plt.grid(True)
 plt.xticks(rotation=45)
 plt.axhline(0, linestyle='--', alpha= 0.5, color = 'grey')
