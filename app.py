@@ -44,6 +44,13 @@ end_date = st.sidebar.date_input('End date (YYYY/MM/DD)')
 # Load data
 df = get_history(symbol=stock_symbol, start=start_date, end=end_date)
 
+# Save data
+url = "https://github.com/arunavadatta2003/NSE-Stock-Analysis.git/data.csv"
+df.to_csv(url, column = ('Open', 'High', 'Low', 'Close', 'Volume'))
+
+#store the data
+df = pd.read_csv(url, error_bad_lines=False)
+
 # Disply the Close Price 
 st.header ("Close Price History Chart of " + stock_symbol)
 st.set_option('deprecation.showPyplotGlobalUse', False)
