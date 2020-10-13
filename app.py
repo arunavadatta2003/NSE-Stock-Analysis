@@ -46,7 +46,7 @@ df = get_history(symbol=stock_symbol, start=start_date, end=end_date)
 
 # Save data
 url = "https://github.com/arunavadatta2003/NSE-Stock-Analysis.git/data.csv"
-df.to_csv(url, column = ('Open', 'High', 'Low', 'Close', 'Volume'))
+df.to_csv(url)
 
 #store the data
 df = pd.read_csv(url, error_bad_lines=False)
