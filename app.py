@@ -28,7 +28,10 @@ st.subheader('Input Area in Sq.M.')
 x = st.number_input("",0.0)
 
 sq_ft = round(x * 10.764,2)
-st.write('Area in Sq.ft. -',sq_ft," Sq.ft.")
+st.write('Area in Sq.ft. -',sq_ft,' Sq.ft.')
+
+acres = x * 0.000247105
+st.write('Area in Acres -', acres, 'acres')
 
 bigha = int(sq_ft//(20*720))
 
