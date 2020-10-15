@@ -46,3 +46,11 @@ df = pd.DataFrame(data=d)
 df['Sq.ft.'] = df['Sq.ft.'].map('{0:g}'.format)
 st.subheader('Area in Bigha - Katha - Chattak')
 st.write(df)
+
+if x <=200:
+    y = 65
+elif x >= 500:
+    y = 50
+elif 200 < x < 500:
+    y = round(50 + (0.05*(500 - x)),2)
+st.write('Permissible Percentage of Ground Coverage -',y,"%")
