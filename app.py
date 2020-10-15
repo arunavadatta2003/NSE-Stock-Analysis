@@ -25,7 +25,7 @@ body {
 # Create a function to get user inputs
 st.header('User Input')
 st.subheader('Input Area in Sq.M.')
-x = st.number_input("",100.5)
+x = st.number_input("",0.0)
 
 sq_ft = round(x * 10.764,2)
 st.subheader('Area in Sq.ft.')
