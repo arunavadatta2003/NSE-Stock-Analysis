@@ -55,4 +55,4 @@ elif x >= 500:
     y = 50
 elif 200 < x < 500:
     y = round(50 + (0.05*(500 - x)),2)
-st.write('Permissible Percentage of Ground Coverage -',y,"%")
+st.write('Permissible Ground Coverage -',y,"%")
